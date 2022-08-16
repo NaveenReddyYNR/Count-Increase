@@ -1,0 +1,32 @@
+import React, { useState } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increase = () => {
+    if (count < 5) {
+      setCount((prev) => prev + 1);
+    }
+  };
+
+  const Dicrease = () => {
+    if (count > 0) {
+      setCount((prev) => prev - 1);
+    }
+  };
+  return (
+    <div style={{ marginTop: "30px", marginLeft: "30px" }}>
+      <button onClick={Dicrease}>Dicrease -</button>
+
+      <span
+        style={{ marginTop: "30px", marginLeft: "30px", marginRight: "30px" }}
+      >
+        {count}
+      </span>
+
+      <button onClick={increase}>Increase + </button>
+    </div>
+  );
+};
+
+export default App;
